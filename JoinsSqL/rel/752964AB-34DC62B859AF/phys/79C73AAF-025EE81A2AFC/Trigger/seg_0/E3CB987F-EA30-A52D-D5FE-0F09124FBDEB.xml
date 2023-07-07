@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="UPDATE_JOB_HISTORY" directorySegmentName="seg_0" id="E3CB987F-EA30-A52D-D5FE-0F09124FBDEB">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>UPDATE_JOB_HISTORY</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[BEGIN
+   add_job_history(:old.employee_id, :old.hire_date, sysdate, 
+   :old.job_id, :old.department_id);
+   END;
+]]></body>
+<triggerTime>AFTER</triggerTime>
+<columns>B5019E09-E948-35C1-89B7-4D17A79E6238, 7D563550-7F4D-59AC-DD48-CE5EC2455AC3</columns>
+<owner>EFC722BB-D711-0A05-A25F-049FC07BF00B</owner>
+<table>EA029FB8-5BCD-16B3-31EE-29F4787E34F7</table>
+</TriggerOraclev10g>

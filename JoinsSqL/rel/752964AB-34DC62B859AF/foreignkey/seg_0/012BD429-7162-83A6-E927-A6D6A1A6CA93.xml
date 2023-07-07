@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="012BD429-7162-83A6-E927-A6D6A1A6CA93" containerWithKeyObject="E10B7E0C-3FE7-E8C2-9207-76B5365FDA25" localFKIndex="F8D56B20-EA5D-3325-BD0B-632A834E32C1" name="LOC_C_ID_FK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>LOC_C_ID_FK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:03 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<referredTableLongName>TECHGLOBALQA.COUNTRIES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A9F16518-9859-FE0E-2458-B0D2DA2BE63D</referredTableID>
+<keyObject>D747268B-77B6-F77B-F3F8-D5612FAC06ED</keyObject>
+<referredKeyID>D747268B-77B6-F77B-F3F8-D5612FAC06ED</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>COUNTRY_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

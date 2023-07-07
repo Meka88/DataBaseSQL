@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="A643C6F5-776B-ED9C-1376-993D954B6160" mainViewID="F95002A7-FB1A-AE7C-1F0A-28BB8BE37E7A">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:27:24 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

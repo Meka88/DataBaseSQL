@@ -1,0 +1,49 @@
+07-02-2023 SQL Group-row Functions
+
+
+	Execution order for a simple query
+
+		1. FROM		-> Which calls the table
+		2. WHERE	-> Filtering condition
+		3. SELECT 	-> Filters the column
+
+
+	Single-row Functions:
+
+		It performas a specific action in each row, and returns back to each row with that specifed action.
+
+		- upper() and lower(): It converts the data to upper or lower case
+		Example:
+			upper('hello')			-> 'HELLO'
+
+		- substr(): Extract the substring from a string based on specified position
+		Example:
+			substr('Hello', 1, 5) 	-> 'Hello'
+
+		- initcap(): Making the first letter of any word capital
+		Example:
+			initcap('hello my name is name') 	-> 'Hello My Name Is Name'
+
+		- instr():  Returns the index of a string
+		Example:
+			instr('hello', 'e')	-> 2
+
+		- trim() - LTRIM(), RTRIM(): It clears all whitespaces, or givin character
+		Example:
+			trim('     hello    ') 	-> 'hello'
+			LTRIM('hhhhello', 'h') 	-> 'ello'
+			RTRIM('hellohhh', 'h') 	-> 'hello'
+
+		- length(): Returns to length of the givin string
+		Example:
+			length('hello') 	-> 5
+
+		- round(): It can take 1, or 2 argument. It rounds up the number after the decimal point if we provide 2 arguments. And it rounds up depends on the number specified in the argument.
+		Example:
+			round(107.088)		-> 108
+			round(107.088, 2) 	-> 107.09
+			round(107.084, 2) 	-> 107.08
+
+		- trunc(): Again, it can take 1 or 2 arguments. If it's called with single argument, it will remove all decimal points. If we call it with 2 arguments, then it will keep seconds arguments amount of numbers as decimals.
+			trunc(107.09890089080) 		-> 107
+			trunc(107.09890089080, 2) 	-> 107.09

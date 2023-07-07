@@ -1,0 +1,58 @@
+07-01-2023 SQL
+
+	RECAP:
+
+	Data:
+		Raw and unprocessed information.
+		Then we process the data to make it meaningful
+
+	Database:
+		It is based on hardwares and softwares. It is a collection of information that is organized in a way makes it easy to access, manage, and manipulate.
+
+		Unrelational database
+			- It is not organized
+			- Faster
+			- Stores the information in a single JSON file
+			- It can be stored in key/value pairs
+
+		Relational datbase
+			- It is organized
+			- Table-based structured to store data
+			- Used Structured Query language (SQL) to update, manipulate and retrieve the data.
+			- Each table must have a relation with 1 or more table to create the conenction between the tables.
+			- Column limit is 1204 and the limit of the rows depends on the data or storage capacity of the cloud.
+
+
+		SQL(Structured Query Language)
+			Used Structured Query language (SQL) to update, manipulate and retrieve the data. It is standart language that is used by many database managemenet system.
+
+			Oracle, MsSQL, Postgre, etc
+
+		SELECT <columnName> FROM <tableName>
+
+		- It is case insensitive
+		- But it is recommended to use upper case for the keywords
+
+
+		SELECT				-> Selects the column
+		FROM 				-> Selects the table
+		WHERE				-> Filtering condition
+
+		AND 				-> This is continious action of condition before that 							can be followed by WHERE, BETWEEN etc.
+		OR
+
+		BETWEEN				-> It gives us the range between 2 int values, INCLUDING
+		CONCAT()			-> It concats two string or data together
+								we can also use || (pipes)
+		LIKE				-> If we are checking if the data starts with, ends with 						or contains any specific character, we MUST use LIKE
+		AS 					-> It's called Aliases, helps us to assign a value to 							column name, or re-name the column, or assign a 							value to table
+		ORDER BY			-> So it orders the column by Ascending or Descending 							order. ORDER BY first_nem ASC.
+
+		NOTE: If you want to order by Ascending, you dont have to explicitly write the ASC keyword it will does it implicitly. But if you want to order by Descending, you have to use DESC keyword.
+
+		IS / IS NOT       	-> It is used for NULL values
+
+		SELECT * FROM EMPLOYEES
+		WHERE comission_pct is NULL;
+
+		IN 					-> We can use instead of OR, and we can call all the 							conditions in ( ).

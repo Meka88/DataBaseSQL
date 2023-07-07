@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="752964AB-CA68-D0CD-58F6-34DC62B859AF" mainViewID="56380E51-BB6C-2B61-53E6-6E7D2E7016EE">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:27:56 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>79C73AAF-E1A7-E669-7DF0-025EE81A2AFC</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>MeerimDB</connName>
+<connUser>TECHGLOBALQA</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
+</relationalModel>

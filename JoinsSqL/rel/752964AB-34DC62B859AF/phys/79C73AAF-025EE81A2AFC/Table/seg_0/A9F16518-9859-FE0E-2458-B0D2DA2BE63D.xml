@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="COUNTRIES" directorySegmentName="seg_0" id="A9F16518-9859-FE0E-2458-B0D2DA2BE63D">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:42 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<schemaObject>C6311BAD-D290-4DDA-C78E-55236871E200</schemaObject>
+<iotPctThreshold>50</iotPctThreshold>
+<logging>YES</logging>
+<organization>INDEX</organization>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>C36431DA-2359-50B4-9194-596862A07AF5</segment>
+<tableSpace>2A7E41D7-7636-8554-C9EF-4CB96C2FE3A3</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="COUNTRY_NAME" id="7015D81D-E680-CA60-39DF-3E27284C9339">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY_ID" id="8E0FB105-A5FA-2E7B-482B-0A20B516D46B">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGION_ID" id="C0689581-741A-F820-5B1F-1500CF33DE1C">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="COUNTR_REG_FK" id="FFD694EC-D785-BD72-A4E4-77BBEFBF9766">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="COUNTRY_C_ID_PK" id="D747268B-77B6-F77B-F3F8-D5612FAC06ED">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<schemaObject>C6311BAD-D290-4DDA-C78E-55236871E200</schemaObject>
+<segment>C36431DA-2359-50B4-9194-596862A07AF5</segment>
+<tableSpace>2A7E41D7-7636-8554-C9EF-4CB96C2FE3A3</tableSpace>
+<indexSegment>C36431DA-2359-50B4-9194-596862A07AF5</indexSegment>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

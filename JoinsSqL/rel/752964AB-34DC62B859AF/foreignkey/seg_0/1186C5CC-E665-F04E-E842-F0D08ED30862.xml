@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1186C5CC-E665-F04E-E842-F0D08ED30862" containerWithKeyObject="DE46F6BA-2521-8597-D073-C78F1C1A2BC4" localFKIndex="3E70C1F7-4EEF-A5ED-4CEA-E61C222F8A2B" name="JHIST_DEPT_FK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_DEPT_FK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<referredTableLongName>TECHGLOBALQA.DEPARTMENTS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>75C2272E-D018-9A99-DB57-ED960FBF4FD3</referredTableID>
+<keyObject>70C030AF-172A-0438-979D-F5DE71854570</keyObject>
+<referredKeyID>70C030AF-172A-0438-979D-F5DE71854570</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>DEPARTMENT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

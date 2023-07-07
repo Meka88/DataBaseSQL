@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="75C2272E-D018-9A99-DB57-ED960FBF4FD3" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="DEPARTMENTS">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>DEPARTMENTS</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Departments table that shows details of departments where employees 
+         work. Contains 27 rows; references with locations, employees, and job_history tables.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DEPARTMENT_ID" id="30703CFE-B5E0-73B4-E7E2-B42997A24F12">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key column of departments table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPARTMENT_NAME" id="8872A575-3B30-1F2F-0A62-FD473F5F8666">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>DEPARTMENT_NAME</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column that shows name of a department. Administration, 
+         Marketing, Purchasing, Human Resources, Shipping, IT, Executive, Public 
+         Relations, Sales, Finance, and Accounting. ]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>DEPT_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="MANAGER_ID" id="85B04156-2F2F-9252-FF9D-FAEA5EE2584D">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Manager_id of a department. Foreign key to employee_id column of employees table. The manager_id column of the employee table references this column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="49697FB8-E5BD-3DD0-8680-D13E76ABFAF0" referredColumn="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048"/>
+</associations>
+</Column>
+<Column name="LOCATION_ID" id="DF987934-58A6-D088-9592-710AFD225DAA">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>DEPARTMENTS</sourceObjSchema>
+<sourceObjName>LOCATION_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Location id where a department is located. Foreign key to location_id column of locations table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6850AC18-D0CA-B87E-9E08-66DE8212EA7C" referredColumn="052BD8FF-A2B5-7876-55B0-6C575DE94438"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="64C76C6B-875D-9B43-EC55-BBF4FD58F9EB" name="DEPT_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>DEPT_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30703CFE-B5E0-73B4-E7E2-B42997A24F12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70C030AF-172A-0438-979D-F5DE71854570" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="DEPT_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>DEPT_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30703CFE-B5E0-73B4-E7E2-B42997A24F12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="731A37E4-B388-9F27-A69A-02E0C5B17C02" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="DEPT_LOCATION_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>DEPT_LOCATION_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF987934-58A6-D088-9592-710AFD225DAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFECF6AF-BC4F-212A-3876-98E276B5E6E9" name="DEPT_LOC_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF987934-58A6-D088-9592-710AFD225DAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1D144BE-8271-56C5-0152-C7A5ACCA93E9" name="DEPT_MGR_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:19 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85B04156-2F2F-9252-FF9D-FAEA5EE2584D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

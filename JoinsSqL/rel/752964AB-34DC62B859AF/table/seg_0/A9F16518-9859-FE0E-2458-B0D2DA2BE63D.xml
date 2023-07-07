@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9F16518-9859-FE0E-2458-B0D2DA2BE63D" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="COUNTRIES">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>COUNTRIES</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[country table. Contains 25 rows. References with locations table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COUNTRY_ID" id="8E0FB105-A5FA-2E7B-482B-0A20B516D46B">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>COUNTRY_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of countries table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>COUNTRY_ID_NN</notNullConstraintName>
+</Column>
+<Column name="COUNTRY_NAME" id="7015D81D-E680-CA60-39DF-3E27284C9339">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>COUNTRY_NAME</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country name]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGION_ID" id="C0689581-741A-F820-5B1F-1500CF33DE1C">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Region ID for the country. Foreign key to region_id column in the departments table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C21D27C2-ACDA-4324-4F69-2D8A095B9C5F" referredColumn="C3BE3372-A1F8-7D7C-7F4F-CD1644BD46EB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D747268B-77B6-F77B-F3F8-D5612FAC06ED" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="COUNTRY_C_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>COUNTRY_C_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E0FB105-A5FA-2E7B-482B-0A20B516D46B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FFD694EC-D785-BD72-A4E4-77BBEFBF9766" name="COUNTR_REG_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0689581-741A-F820-5B1F-1500CF33DE1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="19CAF6CB-5877-A1D9-DD51-E82907E00ED1">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:27:25 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

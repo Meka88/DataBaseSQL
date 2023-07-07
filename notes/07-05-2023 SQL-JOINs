@@ -1,0 +1,10 @@
+07-05-2023 SQL – JOIN / Set Operators / Create
+
+RECAP:
+
+	Subquery (Nested query - Inner Query ) is query embedded inside another query. So database will run the Subquery first, and it will run the main query. It is used to retrieve data that we will need to use in the main query
+
+	-- Let's write a query that is retrieving first_name, last_name and salary from employees table where salary is more than the avarage salary
+
+	SELECT first_name, last_name, salary FROM employees
+	WHERE salary > (SELECT AVG(salary) FROM employees);

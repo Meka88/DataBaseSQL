@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="TECHGLOBALQA" directorySegmentName="seg_0" id="C6311BAD-D290-4DDA-C78E-55236871E200">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:42 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+</SchemaObject>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B2563406-1D2A-D32B-968F-221C13C7F966" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="REGIONS">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>REGIONS</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regions table that contains region numbers and names. Contains 4 rows; references with the Countries table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGION_ID" id="C3BE3372-A1F8-7D7C-7F4F-CD1644BD46EB">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of regions table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>REGION_ID_NN</notNullConstraintName>
+</Column>
+<Column name="REGION_NAME" id="FA030014-0A91-6AF3-A491-9B812E6A90BB">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_NAME</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Names of regions. Locations are in the countries of these regions.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD50AFFE-378C-D1F9-683A-A4122B812C6F" name="REG_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:13 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3BE3372-A1F8-7D7C-7F4F-CD1644BD46EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F99FA03-6D54-C559-F61E-65D95B850EF6" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="REG_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:30:13 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3BE3372-A1F8-7D7C-7F4F-CD1644BD46EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

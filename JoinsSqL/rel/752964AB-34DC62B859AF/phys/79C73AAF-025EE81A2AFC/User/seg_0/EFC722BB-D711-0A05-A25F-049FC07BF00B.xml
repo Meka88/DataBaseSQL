@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="TECHGLOBALQA" directorySegmentName="seg_0" id="EFC722BB-D711-0A05-A25F-049FC07BF00B">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjName>TECHGLOBALQA</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:42 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<schemaObject>C6311BAD-D290-4DDA-C78E-55236871E200</schemaObject>
+<defTableSpace>2A7E41D7-7636-8554-C9EF-4CB96C2FE3A3</defTableSpace>
+<privileges>CREATE SESSION</privileges>
+</UserOraclev10g>

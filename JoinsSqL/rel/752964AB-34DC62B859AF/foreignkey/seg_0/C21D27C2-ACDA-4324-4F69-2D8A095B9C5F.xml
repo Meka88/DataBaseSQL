@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C21D27C2-ACDA-4324-4F69-2D8A095B9C5F" containerWithKeyObject="A9F16518-9859-FE0E-2458-B0D2DA2BE63D" localFKIndex="FFD694EC-D785-BD72-A4E4-77BBEFBF9766" name="COUNTR_REG_FK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>COUNTR_REG_FK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<referredTableLongName>TECHGLOBALQA.REGIONS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B2563406-1D2A-D32B-968F-221C13C7F966</referredTableID>
+<keyObject>CD50AFFE-378C-D1F9-683A-A4122B812C6F</keyObject>
+<referredKeyID>CD50AFFE-378C-D1F9-683A-A4122B812C6F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>REGION_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

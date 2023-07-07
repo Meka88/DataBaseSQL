@@ -1,0 +1,224 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE46F6BA-2521-8597-D073-C78F1C1A2BC4" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="JOB_HISTORY">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JOB_HISTORY</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Table that stores job history of the employees. If an employee 
+         changes departments within the job or changes jobs within the department, 
+         new rows get inserted into this table with old job information of the 
+         employee. Contains a complex primary key: employee_id+start_date.
+         Contains 25 rows. References with jobs, employees, and departments tables.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="C755E432-37E1-14C2-540E-2F3C9507D59D">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date.
+         Foreign key to employee_id column of the employee table]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_EMPLOYEE_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="A54439CE-EB8C-92F1-F42F-5F892FE59CF2" referredColumn="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048"/>
+</associations>
+</Column>
+<Column name="START_DATE" id="C3142A9E-EE90-C6B5-3EAD-58D2973FA1BF">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>START_DATE</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date. 
+         Must be less than the end_date of the job_history table. (enforced by 
+         constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_START_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="END_DATE" id="EDE9567A-F1BD-3A42-0859-CA033963F8A7">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>END_DATE</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last day of the employee in this job role. A not null column. Must be 
+         greater than the start_date of the job_history table. 
+         (enforced by constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_END_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="031049CF-614C-7B62-5D3B-4D8B35A0C39D">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Job role in which the employee worked in the past; foreign key to 
+         job_id column in the jobs table. A not null column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="5FE29360-B191-E4D6-BE70-011BFFBFD8D2" referredColumn="99CF7247-33B6-DBD6-8B66-18340EDE2401"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="3B70BBA2-BD0A-55CC-C60B-F69379D8F679">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>JOB_HISTORY</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Department id in which the employee worked in the past; foreign key to deparment_id column in the departments table]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1186C5CC-E665-F04E-E842-F0D08ED30862" referredColumn="30703CFE-B5E0-73B4-E7E2-B42997A24F12"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="87611724-2A41-2F84-9A4E-CD8A11C65215" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C755E432-37E1-14C2-540E-2F3C9507D59D"/>
+<colUsage columnID="C3142A9E-EE90-C6B5-3EAD-58D2973FA1BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1224711-381E-82F1-F05E-B215A009EFD6" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="JHIST_DEPARTMENT_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_DEPARTMENT_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B70BBA2-BD0A-55CC-C60B-F69379D8F679"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9FEB5D8A-1029-2109-EB9E-045E5E75389B" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="JHIST_EMPLOYEE_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_EMPLOYEE_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C755E432-37E1-14C2-540E-2F3C9507D59D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46494CFA-57B9-0E7D-BC4D-667185E81FAF" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C755E432-37E1-14C2-540E-2F3C9507D59D"/>
+<colUsage columnID="C3142A9E-EE90-C6B5-3EAD-58D2973FA1BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43880529-8F92-62F2-0ECF-31D7AE4017A3" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="JHIST_JOB_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_JOB_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="031049CF-614C-7B62-5D3B-4D8B35A0C39D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E70C1F7-4EEF-A5ED-4CEA-E61C222F8A2B" name="JHIST_DEPT_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B70BBA2-BD0A-55CC-C60B-F69379D8F679"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4CE29E0-3EFC-92F1-3464-BBDD5CD59EF8" name="JHIST_EMP_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C755E432-37E1-14C2-540E-2F3C9507D59D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0A13774-9963-3D2A-A84D-08D37052FAA7" name="JHIST_JOB_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:36 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="031049CF-614C-7B62-5D3B-4D8B35A0C39D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="JHIST_DATE_INTERVAL" directorySegmentName="seg_0" id="D04ACF25-2B42-083E-488C-856E073DC150">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>JHIST_DATE_INTERVAL</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:35 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<rule><![CDATA[end_date > start_date]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

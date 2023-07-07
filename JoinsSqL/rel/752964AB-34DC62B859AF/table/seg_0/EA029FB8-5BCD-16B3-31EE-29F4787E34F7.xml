@@ -1,0 +1,350 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA029FB8-5BCD-16B3-31EE-29F4787E34F7" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMPLOYEES">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMPLOYEES</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[employees table. Contains 107 rows. References with departments, 
+         jobs, job_history tables. Contains a self reference.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of employees table.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="1A80ED23-D278-E4BB-A7E0-9409D0F5820B">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[First name of the employee. A not null column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="B3C15698-1E85-C16E-EC82-17E067077036">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last name of the employee. A not null column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_LAST_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="EMAIL" id="84BB5580-82F9-F3EF-377B-BE133CBED17E">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Email id of the employee]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_EMAIL_NN</notNullConstraintName>
+</Column>
+<Column name="PHONE_NUMBER" id="F904C00B-8C01-47BF-8BCF-E85CF89A5622">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of the employee; includes country code and area code]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HIRE_DATE" id="F72FF4B7-6028-DC7E-A64B-D21B12C13C9D">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>HIRE_DATE</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date when the employee started on this job. A not null column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_HIRE_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="7D563550-7F4D-59AC-DD48-CE5EC2455AC3">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>JOB_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Current job of the employee; foreign key to job_id column of the 
+         jobs table. A not null column.]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>EMP_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="6EF20462-3561-4D69-9774-D144B221CB1D" referredColumn="99CF7247-33B6-DBD6-8B66-18340EDE2401"/>
+</associations>
+</Column>
+<Column name="SALARY" id="E5CA16F8-C493-8EC4-0FEC-3BA6ADC382DC">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Monthly salary of the employee. Must be greater 
+         than zero (enforced by constraint emp_salary_min)]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<constraintName>EMP_SALARY_MIN</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="salary &gt; 0"/>
+<implementationDef dbType="Oracle Database 12cR2" definition="salary &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMISSION_PCT" id="17889591-50F3-83AF-934D-71E4C4A739D1">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>COMMISSION_PCT</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Commission percentage of the employee; Only employees in sales 
+         department elgible for commission percentage]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MANAGER_ID" id="ED1F59F6-8612-4A82-D4B1-E1980683AA30">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Manager id of the employee; has same domain as manager_id in 
+         departments table. Foreign key to employee_id column of employees table.
+         (useful for reflexive joins and CONNECT BY query)]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40F45B0D-1BF2-20A3-A3C7-C8C31FC4388D" referredColumn="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="B5019E09-E948-35C1-89B7-4D17A79E6238">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>EMPLOYEES</sourceObjSchema>
+<sourceObjName>DEPARTMENT_ID</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Department id where employee works; foreign key to department_id 
+         column of the departments table]]></commentInRDBMS>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E455001E-C722-2BE7-2931-DA401967798C" referredColumn="30703CFE-B5E0-73B4-E7E2-B42997A24F12"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="46D5112D-ECB4-26B8-F435-1191F2DFE99E" name="EMP_EMP_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7198617-A5BB-CFD6-063C-CFF5381107B6" name="EMP_EMAIL_UK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84BB5580-82F9-F3EF-377B-BE133CBED17E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3216F4D-CAE5-DEBA-4703-763E75AF92A3" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_DEPARTMENT_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_DEPARTMENT_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5019E09-E948-35C1-89B7-4D17A79E6238"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DB3E9B6B-B5C0-062F-8468-D3060FBDC0EC" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_EMAIL_UK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_EMAIL_UK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84BB5580-82F9-F3EF-377B-BE133CBED17E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0183950F-F38D-EB76-6729-DBEB99696BB3" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_EMP_ID_PK">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_EMP_ID_PK</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA8BAB8D-7FF4-205B-F79D-EEA0F579C048"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0523E490-4962-658D-D023-8F42B0FFFC54" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_JOB_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_JOB_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D563550-7F4D-59AC-DD48-CE5EC2455AC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF75CB84-C2E7-2266-6186-4B875CDC4C1C" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_MANAGER_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_MANAGER_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED1F59F6-8612-4A82-D4B1-E1980683AA30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C44BAD6-233C-89FA-0C02-2EB6717B8303" schemaObject="C6311BAD-D290-4DDA-C78E-55236871E200" name="EMP_NAME_IX">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjSchema>TECHGLOBALQA</sourceObjSchema>
+<sourceObjName>EMP_NAME_IX</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3C15698-1E85-C16E-EC82-17E067077036"/>
+<colUsage columnID="1A80ED23-D278-E4BB-A7E0-9409D0F5820B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A79EBE48-D211-0DE2-F6AF-D564DFDA73C9" name="EMP_DEPT_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5019E09-E948-35C1-89B7-4D17A79E6238"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA22C20A-74B2-B238-032A-B754959AB544" name="EMP_JOB_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D563550-7F4D-59AC-DD48-CE5EC2455AC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BC16A1A1-86EA-8B95-FD6F-EBD88F87A876" name="EMP_MANAGER_FK">
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:29:27 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED1F59F6-8612-4A82-D4B1-E1980683AA30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

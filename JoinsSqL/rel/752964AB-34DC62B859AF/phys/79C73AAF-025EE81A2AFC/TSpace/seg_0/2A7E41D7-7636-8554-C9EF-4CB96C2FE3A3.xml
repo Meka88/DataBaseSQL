@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="USERS" directorySegmentName="seg_0" id="2A7E41D7-7636-8554-C9EF-4CB96C2FE3A3">
+<sourceConnName>MeerimDB</sourceConnName>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>mekab</createdBy>
+<createdTime>2023-07-06 00:28:43 UTC</createdTime>
+<ownerDesignName>JoinsSqL</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+</TableSpaceOraclev10g>
