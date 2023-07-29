@@ -1,0 +1,265 @@
+07-25-2023 DataBase and API interview questions
+
+===============================
+======== DB QUESTIONS =========
+===============================
+
+
+What is the difference between Relational and Non-Relational Databases? 
+
+    Relational Databases:
+
+        - It is based on the tables
+        - Each table has a relation to each other using Primary and Foreign Keys
+        - They are more organized and it is easy to retrieve information
+        - SQL is the language to work with relational databases.
+        - And it consists of rows and columns
+
+    Unrelational (No-SQL) databases:
+
+        - It is not in an organized order
+        - More flexible and better adaptability
+        - It stores the information in JSON format as key-value pairs
+        - It is faster to retrieve the information
+
+What is the difference between the WHERE and HAVING clauses? 
+    
+
+    We use the WHERE clause when filtering each row from the table. And we use HAVING with aggregate functions, after we group. So it will filter the GROUPS not each row.
+
+
+
+1. What is SQL and what are the basic SQL commands?
+
+    SQL is a standardized programming language for managing and manipulating relational databases. Basic SQL commands are:
+
+        SELECT
+        FROM
+        WHERE
+        JOIN
+        ORDER BY
+        GROUP BY
+        BETWEEN
+        IN
+        LIKE
+        NOT
+
+   
+
+3. What are the primary and foreign keys in a database table?
+
+    Primary key: It's a column in a table that uniquely identifies each row in the table. It must be unique and it cannot be null.
+
+    Foreign key: Foreign keys can be null, and they don't need to be unique. These keys are the primary source to connect to tables.
+
+
+4. What are the different clauses used in SQL and the order we use them in a query?
+
+    1. SELECT
+    2. FROM
+    3. WHERE
+    4. GROUP BY
+    5. HAVING
+    6. ORDER BY
+
+
+5. What are AND, OR, NOT, BETWEEN, and IN operators?
+
+    AND: Returns true if both conditions being compared are true
+    OR: Returns true if at least one of the conditions being compared is true
+    NOT: Returns the inverse of a condition.
+    BETWEEN: Selects values within a given range. The values can be numbers, text or dates.
+    IN: Shortcut of OR command. Allows you to specify multiple values in a WHERE clause, acting as a shorthand for multiple OR conditions.
+
+
+6. What are the single-row and multi-row functions?
+
+    Single row functions:
+
+        Single-row functions return a single result row for each row of the queried table such as :
+
+        LOWER()
+        UPPER()
+        SUBSTR()
+        LENGTH()
+        TRIM()
+        INITCAP()
+
+    Multi-row functions(Aggregate functions):
+
+        Perform calculations on a set of rows, and return a single summary value, such as:
+
+        SUM()
+        COUNT()
+        MAX()
+        MIN()
+        AVG()
+
+
+7. What is a subquery in SQL?
+
+    A subquery is a query nested inside another query. It is easier and more flexible to retrieve the information from the other tables.
+
+    
+
+8. What are the joins and differences between them?
+
+    Joins are used to combine rows from two or more tables based on a related column. There are several types of joins:
+
+        INNER JOIN:
+        Returns records that have matching values in both tables.
+
+        LEFT JOIN:
+        Returns everything from left table, and everything matches from the right table.
+
+        RIGHT JOIN:
+        Returns everything from right table, and everything matches from the left table.
+
+        FULL JOIN:
+        Returns all records when there is a match in either the left or the right table.
+
+ 
+
+9. What is the difference between DELETE, TRUNCATE, and DROP commands in SQL?
+        
+        DELETE: Removes one or more rows from a table. A where clause can be used to specify which rows to delete.
+
+        TRUNCATE: Removes all rows from a table, but the table structure and its columns, indexes, and so on remain. It's faster than DELETE because it does not log individual deletions.
+
+        DROP: Removes a table or a database. When you drop a table, all the rows are deleted, and the table structure is removed from the database.
+
+
+10. Can you please tell me about your Database testing process?
+
+    1. Start from where you are assigned to that User Story.
+        - Sprint planning meeting
+
+    2. Talk about the process where you create your test cases.
+        - I go over the requirements and create detailed test cases.
+
+    3. Then talk about your manual testing process, during your talk about this tell sometimes you find a bug in this stage.
+        - SQL Developer. Writing a query and validating it manually
+        - Sometimes I find some bugs, and I report the bugs and wait for those bugs to be fixed before I start the automation
+
+    4. Talk about your automation process.
+        - Your JAVA TDD Database framework using JDBC
+
+
+
+================================
+======== API QUESTIONS =========
+================================
+ 
+1. What is an API, and why is it used?
+
+    It is a set of rules and protocols for building and interacting with software applications. It acts as a bridge between different software systems, allowing them to communicate with each other.
+
+
+2. Can you explain the difference between REST and SOAP APIs?
+
+    SOAP:
+        (Simple Object Access Protocol) It is a type of Web Service for exchanging information using XML. It operates over HTTP and it is often used in enterprise applications.
+
+    REST API:
+        It is a more architectural style that uses standard HTTP methods. It's simpler and more flexible than SOAP, making it more popular for web services. It can use both JSON and XML format as well as regular text format.
+
+    GraphQL: 
+        It is a query language for API which is the one developed recently and it is getting more popular.
+
+  
+
+3. What are the main components of an HTTP request and response?
+
+    - Endpoint
+    - Request Header
+    - Request Body (for POST, PUT, or PATCH)
+
+    - Response Body
+    - Response Header
+    - Status code
+
+    GET, POST, PUT, PATCH, AND DELETE are the HTTP methods.
+
+
+
+4. How does OAuth work? Can you explain a scenario where it might be used in API testing?
+    
+    OAuth (Open Authorization) is a protocol that allows an application to authorize another application to access its data without sharing passwords. It's often used when you want to give a third-party application access to user data held by another service. For example, using Google to log in to third-party applications
+
+5. What are the different types of HTTP status codes? Can you provide an example of when each might be used?
+
+    - 1xx       -> Informational
+    - 2xx       -> Success
+    - 3xx       -> Redirect
+    - 4xx       -> Client Error
+    - 5xx       -> Server Error
+
+
+6. Explain the concept of API endpoints and their significance.
+    
+    API endpoints are specific paths where a service can be accessed by a client application. They act like functions of the API, carrying out specific tasks and returning the data.
+
+7. What tools or libraries have you used for API testing? Can you compare them in terms of ease of use, functionality, and scalability?
+
+    - Swagger                           -> Documentation for API
+
+    - Postman                           -> It is an application to test API
+
+    - RestAssured                       -> It is a library that is used to test RESTful web services
+
+    - Hamcrest                          -> Hamcrest is a library provided as a Matcher class to do assertions and we can do chain assertions with any API call
+
+    - faster.xml / Jackson              -> It is a Java library that provides efficient serialization (Java Object to JSON format) with the ObjectMapper class.
+
+    - Lombok                            -> It is a Java library that allows us to reduce the amount of code when we are encapsulating the private fields with the help of @Data and @Builder annotations
+
+        @Data       ->      Generates getters and setters for all the instance variables in the class.
+
+        @Builder    ->      It allows us to set and get the values that are coming from the POJO class without creating an object from that class.
+
+
+    - TestNG                            -> Library for assertion and as a runner
+
+    - Apache POI                        -> It helps programmers to retrieve the data from the office tools.
+
+
+8. What are the common challenges faced while testing APIs and how would you overcome them?
+
+    Common challenges in testing are mostly because of a lack of proper documentation and changing requirements.
+
+    To overcome this issue, as a tester, we should work closely with the development team, and create flexible tests that can handle changes to adapt with changing requirements.
+
+
+9. What is API documentation and why is it important?
+
+    
+    The API documentation provides instructions about how to effectively use and integrate with an API. It's a crucial resource for programmers as it contains all the information needed to work with API. Including endpoints, headers, request/response examples, and error messages.
+
+    SWAGGER.
+    Confluence - Jira
+    Developer tools - Network Tab
+
+
+10. How do you ensure data integrity while testing APIs?
+
+    To ensure data integrity in API testing, you need to confirm that the data returned in the response matches what's expected. This can involve checking that the correct data is returned in the right format. Also, we can check the data through the Database if we want to be more specific.
+
+
+11. What is API mocking? How can it be used to enhance testing?
+
+    API mocking is a technique where a mock or dummy version of an API is used for testing purposes. It can be used when the actual API isn't allowed to use or is not available to use. And it can be also used to increase the speed of testing by not relying on actual server responses.
+
+
+12. What is the role of headers in API requests and responses?
+
+    Headers in the API request and responses provide additional information that is not found in the body. This can include metadata about the request or response, such as the content type, authorization information, cache settings, and more.
+
+
+13. How do you validate response body and status codes in API testing?
+
+    To validate the response body in API testing, you would compare the actual response body data against the expected. Validating status codes involves checking the HTTP status code in the response against the expected code ( for instance, 200 for a successful GET request.)
+
+
+14. Describe a situation where you performed automation testing on APIs. What tools did you use and what was the outcome?
+
+    This answer would be based on your experience. For example, you might want to describe a situation (think about the projects that you have done) where you used a tool like Postman, or Rest-Assured to create automated tests for REST API and explain the challenges you faced, the steps you took to solve those challenges, and the outcome of your tests.

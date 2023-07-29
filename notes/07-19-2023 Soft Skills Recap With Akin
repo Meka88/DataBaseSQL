@@ -1,0 +1,59 @@
+07/19/2023 - UI-API-DB Testing
+SDLC -> Software Development Life Cycle
+Software Development
+Software: It is in our daily life and we use it for shopping, banking, communication, navigation
+All software is built with code.
+IDEA: Hey guys, I have an idea that is going to help people to do _______.
+Requirement document - tech guy - Tools and designs
+Development: Writing code that evolves into the software product.
+Software = UI + API + DB
+Database first -> foundation - skeleton
+Backend Developer + System Architect + CTO + Engineering Director
+Database: Tables, foreign keys, primary keys, columns
+	
+What is the Database you guys are using in your current company?
+Oracle, MSSQL, MongoDB, AWS, Cassandra, PortreSQL
+What is the framework that your backend developers use?
+Java - springboot
+C# - .NET
+JavaScript - NodeJS, ExpressJS
+Ruby - Ruby on Rails
+Pyhton - Django
+SELECT - CREATE - DELETE - SET
+GET - POST - DELETE - PUT
+Add user / delete user / update user / view user / delete all users
+API - Services - Micro-Services - End points
+Building services that creates, updates, deletes data
+API-Test
+Postman -> Manual
+Rest-Assured -> automation
+BUG: It is our(developers) mistake. HUMAN ERROR
+UI: HTML - CSS - JavaScript
+Framework: ReactJS, AngularJS, VueJS
+WE ARE RESPOBSIBLE FOR ALL LAYERS - UI - API - DB
+MANUAL - Web Page | Postman | SQL Developer / MSSQL
+Automation - Selenium | Rest-Assured | JDBC / Nuget package
+End to end testing
+1. User flow - UX
+2. UI-API-DB layers
+if(singUpButton.clicked()){
+if(f)
+	return "{firstName= "Akin" ".....
+}
+SELECT * FROM accounts WHERE phone=3120000000 AND password=123456789;
+1 row
+WHAT DO YOU NEED TO TEST AN END POINT?
+Method type: GET/POST/DELETE/PUT/PATCH
+Status code: 200/201/400/401/404/409
+Request/Response:
+Query parameters:
+End point:
+Headers:
+Authorization:
+WHERE DO YOU GET THIS?
+-SWAGGER
+-EXCEL
+-Acceptance Criteria - USER STORY
+Robot Framework
+Mainframe Testing / Desktop App testing / Mobile Testing
+

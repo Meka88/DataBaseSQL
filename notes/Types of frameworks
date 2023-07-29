@@ -1,0 +1,25 @@
+Types of frameworks
+
+BDD - Behavior-Driven Framework
+
+	It's based on users behaviour and it is easy to understand for non-technical people in the company
+
+TDD - Test-Driven Framework
+
+	It's writing the test before you doing the actual automation. So testing comes first, we dont really worry too much about the user behaviors, our priority is automating the functionality as quick as possible.
+
+DDD - Data-Driven Framework
+
+	Use data from external sources like files or databases to run tests with different sets of input values.
+
+KDD	- Keywrod-Driven Framework
+
+	Keyword Driven Framework is a functional automation testing framework that divides test cases into four different parts in order to separate coding from test cases and test steps for better automation. Keyword driven testing framework divides the test cases as test steps, objects of test steps, actions on test steps and data for test objects for better understanding.
+
+		In order to create a Keyword driven framework, you need following things
+
+		- Excel Sheet– Identify the keywords and store them in an Excel sheet
+		- Function Library– Function library consist of the function for the business flows ( login button for any website).So when test is executed, it will read the keyword from the Excel sheet and call the functions accordingly
+		- Data Sheets– Data sheets is used to store the test data that will be used in the application
+		- Object Repository– based on your keyword driven framework you can use an object repository
+		- Test Scripts– Based on the design of your framework, you can have test scripts for each manual Test Case or a single driver script

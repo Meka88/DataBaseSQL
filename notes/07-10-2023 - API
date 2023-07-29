@@ -1,0 +1,62 @@
+07-10-2023 - API
+
+	API (Application Programming Interface)
+
+		APIs are a set of rules and protocols for building and interacting with sofware applications. They define the methods and data formats that a program can use to communicate with other software components.
+
+	Web Services
+
+		These are standardized protocols or interfaces that allow different applications to communicate with each other over the WEB. They enable interaction beween applications over the internet, regardless of their underlying architecture or platform.
+
+	HTTP / HTTPS
+
+		HTTP(Hypertext Transfer Protocol) and (HTTP Secure) are protocols for transmitting hypertext requests from a client to a server. HTTPS is a secure version that uses encryption to protect data during transmission.
+
+	CRUD 
+
+		Stands for Create, Read, Update, and Delete. These are the basic functions that models should be able to do in systems that sotre the records.
+
+	HTTPS Methods (GET, POST, PUT, PATCH, AND DELETE)
+
+		These are the types of request methods in HTTP. 
+
+		GET 	-> To retrieve the data.
+		POST 	-> Send a data
+		PUT 	-> Updating the existing data
+		PATCH 	-> Partially updates the existing data
+		DELETE 	-> Removes the existing data
+
+
+	SOAP and Rest
+
+		SOAP(Simple Object Access Protocol) and REST (Representational State Transfer) are two different web service communication methods. SOAP is a protocol with a defined standart, whereas REST is an arhitectural style without an official standart.
+
+	GraphQL
+
+		It is released by Facebook in 2015. This is a query language gor APIs and runtime for executing those queries with your existing data. It provides an efficient and powerful alternative to REST and offers some advantages for some use cases.
+
+	Request / Response
+
+		Request: It is made from a client to server for certain resources. Any API calls we made is a Request. If we are doing our request using POST, PUT or PATCH, we should provide a request body to our method.
+
+		Response: It is the servers answer to request.
+
+	HTTP Status Codes
+
+		These are standart response codes given by web servers on the internet. We can simply say, they help identify the cause of the problem when a web page or other resource does not load properly.
+
+		100 	-> Information
+		200 	-> Success
+		300 	-> Redirect
+		400 	-> Client error
+		500 	-> Server error.
+
+
+	Endpoint
+
+		It refers to a specific URL where an API can access the resources they need.
+
+
+	JSON(JavaScript Object Notation)
+
+		It's a lightweight data-interchange format that is easy for us to read and write and easu for machines to parse, and generate. It's often used between the browser communications.

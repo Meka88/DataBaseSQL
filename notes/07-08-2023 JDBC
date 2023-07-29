@@ -1,0 +1,44 @@
+07-08-2023 JDBC
+
+JDBC stands for Java Database Connectivitiy. Its a Java API that provides standart way for java programs to access and interact with the database.
+JDBC is Java API.
+
+	It allows Java programs to connect wide range od database like Oracle, MySQL, MSSQL, Postgre etc.
+
+	To use JDBC, a Java programs to load JDBC driver, which is a software component that provides connection and interface between Java and Database. Once the dirver is loaded, the Java program can use JDBC classes and interfaces so we can establish connection to the database, we can create SQL statements.
+
+
+	1. Connection Interface
+
+		The Connection interface represents a connection to the database. It provides methods to connect to our database through DriverManager() class, so we can create and execute SQL statements and we can manage these transactions. To establosh a connection, we typically need to provide URL that specifies the database location, a username, and a password. Connection Interface also provides those methods to manage the connection.
+
+
+	2. Statement Interface
+
+		The Statement interface represents a SQL statement that can be executed on a database. It provides methdos to create and execute SQl queries that we need while our testing.
+
+	3. ResultSet Interface
+
+		The Resultset interface represents the result of a database query. It provides methods to retrieve the data from the query, such as retrieving values by the Colum name, or index.
+
+
+	- Create a connection
+
+		Connection connection = DriverManager.getConnection("URL", "username", "password")
+
+		NOTE: Do not forget to handle the exception coming from the getConnection();
+
+	- Create the statement
+
+		Statement statement = connection.createStatement();
+
+	- Execute a SQL query and get the resultSet
+
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM employees");
+
+		- Process the result set
+
+			while(resultSet.next()){
+				System.out.println(resultSet.getString("COLUMN_NAME"));
+				System.out.println(resultSet.getString(columnIndex));
+			}
